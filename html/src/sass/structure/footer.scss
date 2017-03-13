@@ -1,0 +1,19 @@
+footer{
+  margin: 20px 0 0;
+  .footer-cont{
+    width: 678px;
+    margin: 0 auto;
+    @include clearfix;
+  }
+  .gdin-logo{
+    @extend %copyright;
+    float:left;
+  }
+  p{
+    float: left;
+    color: #4a4a4a;
+    font-size: 14px;
+    line-height: 24px;
+    margin-left:30px;
+  }
+}

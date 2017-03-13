@@ -1,0 +1,6 @@
+/*!
+ * @project : website
+ * @version : 1.0.0
+ * @author  : Mrfangge
+ * @update  : 2017-03-13 4:34:18 pm
+ */seajs.config({base:"./js/",alias:{jquery:"plugins/jquery.js",swiper:"plugins/swiper-3.4.1.jquery.min.js",mobile:"deps/mobile"},preload:["jquery"]}).use(["jquery","app/main.js"],function(){var e=$("body");var i=e.hasClass("g-mobile");$(window).on("resize",function(){var e=$(window).width();if(e<1e3&&!i){$(window).trigger("resize:narrow");i=true}else if(e>=1e3&&i){$(window).trigger("resize:wide");i=false}});$(window).on("resize:narrow",function(){e.addClass("g-mobile")}).on("resize:wide",function(){e.removeClass("g-mobile")});$(window).trigger("resize");if(i){seajs.use("swiper",function(){var e=new Swiper("#slide",{pagination:".swiper-pagination",slidesPerView:"auto",centeredSlides:true,paginationClickable:true,spaceBetween:30,nextButton:".swiper-button-next",prevButton:".swiper-button-prev"})})}else{seajs.use("swiper",function(){var e=new Swiper("#slide",{pagination:".swiper-pagination",slidesPerView:"auto",centeredSlides:true,paginationClickable:true,spaceBetween:30,nextButton:".swiper-button-next",prevButton:".swiper-button-prev"})})}});

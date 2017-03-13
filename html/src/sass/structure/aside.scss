@@ -1,0 +1,35 @@
+aside{
+  width: 185px;
+  float:left;
+  padding:25px 0;
+  h2{
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left:12px;
+    margin-bottom: 20px;
+    i{
+      float:left;
+      @extend %fastlink;
+      margin-right:14px;
+    }
+  }
+  li a{
+    display: block;
+    color: #4a4a4a;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+    color: #4990e2;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  li ul a{
+    font-size: 12px;
+    font-weight: normal;
+    color: #4a4a4a;
+  }
+}
